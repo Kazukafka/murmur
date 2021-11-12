@@ -1,0 +1,20 @@
+{
+  "staging": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-murmur-staging-104647-authRole",
+      "UnauthRoleArn": "arn:aws:iam::779117780709:role/amplify-murmur-staging-104647-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::779117780709:role/amplify-murmur-staging-104647-authRole",
+      "Region": "us-east-2",
+      "DeploymentBucketName": "amplify-murmur-staging-104647-deployment",
+      "UnauthRoleName": "amplify-murmur-staging-104647-unauthRole",
+      "StackName": "amplify-murmur-staging-104647",
+      "StackId": "arn:aws:cloudformation:us-east-2:779117780709:stack/amplify-murmur-staging-104647/d5ce88b0-43a5-11ec-93a5-06b5df4dbaf8",
+      "AmplifyAppId": "d31o3y3x04juma"
+    },
+    "categories": {
+      "auth": {
+        "murmur": {}
+      }
+    }
+  }
+}
