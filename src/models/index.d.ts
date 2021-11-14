@@ -1,6 +1,10 @@
 import { ModelInit, MutableModel, PersistentModelConstructor } from "@aws-amplify/datastore";
 
-
+export enum MessageStatus {
+  SENT = "SENT",
+  DELIVERED = "DELIVERED",
+  READ = "READ"
+}
 
 
 
@@ -22,9 +26,14 @@ type UserMetaData = {
 
 export declare class Message {
   readonly id: string;
-  readonly content: string;
+  readonly content?: string;
   readonly userID?: string;
   readonly chatroomID?: string;
+  readonly image?: string;
+  readonly audio?: string;
+  readonly status?: MessageStatus | keyof typeof MessageStatus;
+  readonly replyToMessageID?: string;
+  readonly forUserId?: string;
   readonly createdAt?: string;
   readonly updatedAt?: string;
   constructor(init: ModelInit<Message, MessageMetaData>);
@@ -37,8 +46,12 @@ export declare class ChatRoom {
   readonly LastMessage?: Message;
   readonly Messages?: (Message | null)[];
   readonly ChatRoomUsers?: (ChatRoomUser | null)[];
+  readonly Admin?: User;
+  readonly name?: string;
+  readonly imageUri?: string;
   readonly createdAt?: string;
   readonly updatedAt?: string;
+  static id: any;
   constructor(init: ModelInit<ChatRoom, ChatRoomMetaData>);
   static copyOf(source: ChatRoom, mutator: (draft: MutableModel<ChatRoom, ChatRoomMetaData>) => MutableModel<ChatRoom, ChatRoomMetaData> | void): ChatRoom;
 }
@@ -60,6 +73,8 @@ export declare class User {
   readonly status?: string;
   readonly Messages?: (Message | null)[];
   readonly chatrooms?: (ChatRoomUser | null)[];
+  readonly lastOnlineAt?: number;
+  readonly publicKey?: string;
   readonly createdAt?: string;
   readonly updatedAt?: string;
   constructor(init: ModelInit<User, UserMetaData>);
