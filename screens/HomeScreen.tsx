@@ -23,11 +23,11 @@ export default function TabOneScreen() {
       //   horizontal
       // /> }
       />
-      <Pressable
+      {/* <Pressable
         onPress={logOut}
         style={{ backgroundColor: 'red', height: 50, margin: 10, borderRadius: 5, alignItems: 'center', justifyContent: 'center' }}>
         <Text>Logout</Text>
-      </Pressable>
+      </Pressable> */}
     </View>
   );
 }

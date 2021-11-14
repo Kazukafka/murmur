@@ -14,6 +14,12 @@
     "categories": {
       "auth": {
         "murmur": {}
+      },
+      "function": {
+        "murmurPostConfirmation": {
+          "deploymentBucketName": "amplify-murmur-staging-104647-deployment",
+          "s3Key": "amplify-builds/murmurPostConfirmation-4f4b4563462b5175724a-build.zip"
+        }
       }
     }
   }

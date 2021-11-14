@@ -11,6 +11,18 @@ Parameters:
     Type: String
 
   
+  
+  
+  functionmurmurPostConfirmationArn:
+    Type: String
+    Default: functionmurmurPostConfirmationArn
+  
+  functionmurmurPostConfirmationName:
+    Type: String
+    Default: functionmurmurPostConfirmationName
+  
+  
+  
 
     
   identityPoolName:
@@ -139,7 +151,6 @@ Parameters:
   adminQueries:
     Type: String
             
-            
   
   thirdPartyAuth:
     Type: String
@@ -158,6 +169,31 @@ Parameters:
             
         
   dependsOn:
+    Type: CommaDelimitedList
+      
+  triggers:
+    Type: String
+  
+            
+  
+  hostedUI:
+    Type: String
+            
+            
+      
+  parentStack:
+    Type: String
+        
+  authTriggerConnections:
+    Type: String
+  
+            
+  
+  breakCircularDependency:
+    Type: String
+            
+        
+  permissions:
     Type: CommaDelimitedList
       
 Conditions:
